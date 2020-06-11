@@ -207,7 +207,14 @@ const Peer = window.Peer;
 
     });
 
-    //カメラマイクonoff追加
+
+
+
+    sendTrigger.addEventListener('click', onClickSend);
+
+    leaveTrigger.addEventListener('click', () => room.close(), { once: true });
+
+//カメラマイクonoff追加
 //ミュート
 const toggleCamera = document.getElementById('js-toggle-camera');
 const toggleMicrophone = document.getElementById('js-toggle-microphone');
@@ -233,13 +240,6 @@ localVideo.srcObject = localStream;
 localVideo.muted = true; // 自分の音声を自分のスピーカーから聞こえなくする。相手には届く。
 localVideo.playsInline = true;
 localVideo.autoplay = true;
-
-
-
-    sendTrigger.addEventListener('click', onClickSend);
-
-    leaveTrigger.addEventListener('click', () => room.close(), { once: true });
-
 
 
     function onClickSend() {
