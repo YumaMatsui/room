@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <title>SkyWay - Room example</title> -->
-    <title>SkyWay 多人数でのビデオ通話</title>
+    <title>学会開催支援システム</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -19,11 +19,11 @@
 
     <div class="container">
 
-      <h1 class="heading">学会運営システム（多人数でのでビデオ通信）</h1>
+      <h1 class="heading">学会開催運営システム</h1>
 
       <p class="note">
 
-        Room モードの変更 (room入室前に設定する):
+        Room モード:
 
         <a href="#">mesh</a> / <a href="#sfu">sfu</a>
 
@@ -62,20 +62,27 @@
         </div>
 
       </div>
-
-      <p class="meta" id="js-meta"></p>
-
-      <!-- カメラマイクonoff追加-->
+      <!-- カメラマイクonoff追加 --> 
       <div class="toggle-mute">
-        <button id="js-toggle-camera">Toggle Camera</button>
+        <!-- <button id="js-toggle-camera">Toggle Camera</button> -->
+        <a href="#" class="js-toggle-camera">カメラ切替</a>
+        <!-- <button id="js-toggle-camera">カメラ切替</button> -->
         <span id="camera-status"></span>
         <br>
       
-        <button id="js-toggle-microphone">Toggle Microphone</button>
+        <!-- <button id="js-toggle-microphone">Toggle Microphone</button> -->
+        <!-- <button id="js-toggle-microphone">マイク切替</button> -->
+        <a href="#" class="js-toggle-microphone">マイク切替</a>
         <span id="microphone-status"></span>
-        <video id="js-local-stream"></video>
+        <!-- ↓があると変な黒い画面ができるため消してみた -->
+        <!-- <video id="js-local-stream"></video> -->
         <br>
       </div>
+
+      <p class="meta" id="js-meta"></p>
+
+      <!-- 最初の位置↓ カメラマイクonoff追加 --> 
+      
 
     </div>
 
