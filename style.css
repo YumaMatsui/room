@@ -73,7 +73,7 @@ video {
 
   margin-right: auto;
 
-  width: 980px;
+  width: 1200px;
 
 }
 
@@ -125,10 +125,9 @@ video {
 
 .p2p-data .messages {
 
-  /* background-color: #eee; */
-  background-color: #FFFFCC;
+  background-color: #eee;
 
-  min-height: 70px;
+  min-height: 100px;
 
   padding: 8px;
 
@@ -164,9 +163,11 @@ video {
 
 .room .messages {
 
-  background-color: #eee;
+  /* background-color: #eee; */
+  background-color: #FFFFCC;
 
-  min-height: 100px;
+  /* min-height: 100px; */
+  min-height: 150px;
 
   padding: 8px;
 
