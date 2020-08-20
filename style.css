@@ -125,9 +125,10 @@ video {
 
 .p2p-data .messages {
 
-  background-color: #eee;
+  /* background-color: #eee; */
+  background-color: #FFFFCC;
 
-  min-height: 100px;
+  min-height: 70px;
 
   padding: 8px;
 
