@@ -175,6 +175,32 @@ video {
 
 }
 
+table {
+  position:  absolute;        /* 要素の配置方法を指定 */
+  background-color: #fff;     /* 背景色指定 */
+  /* padding:  20px;            /* 余白指定 */
+  left:  1020px;                /* 左からの位置指定 */
+  top: 400px;                  /* 上からの位置指定 */
+}
+
+.bxslider {
+  position: relative;
+  left:  -100px; 
+}
+
+.container2 {
+  position: relative;
+  left:  540px; 
+  top: -300px;
+}
+
+.container3 {
+  position: relative;
+  left:  450px; 
+  top: -300px;
+}
+
+
 /* ボタン */
 /* .js-toggle-camera {
   display: inline-block;
