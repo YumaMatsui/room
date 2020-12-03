@@ -2,147 +2,147 @@
 
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <title>SkyWay - Room example</title> -->
-    <title>学会開催支援システム</title>
+  <!-- <title>SkyWay - Room example</title> -->
+  <title>学会開催支援システム</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div class="container">
+  <div class="container">
 
-      <h1 class="heading">学会開催運営システム</h1>
+    <h1 class="heading">学会開催運営システム</h1>
 
-      <p class="note">
+    <p class="note">
 
-        Room モード:
+      Room モード:
 
-        <a href="#">mesh</a> / <a href="#sfu">sfu</a>
+      <a href="#">mesh</a> / <a href="#sfu">sfu</a>
 
-      </p>
+    </p>
 
-      <div class="room">
+    <div class="room">
 
-        <div>
+      <div>
 
-          <video id="js-local-stream"></video>
+        <video id="js-local-stream"></video>
 
-          <span id="js-room-mode"></span>:
+        <span id="js-room-mode"></span>:
 
-          <input type="text" placeholder="セッション名" id="js-room-id">
+        <input type="text" placeholder="セッション名" id="js-room-id">
 
-          <button id="js-join-trigger">入室</button>
+        <button id="js-join-trigger">入室</button>
 
-          <button id="js-leave-trigger">退室</button>
+        <button id="js-leave-trigger">退室</button>
 
-        </div>
-
-
-
-        <div class="remote-streams" id="js-remote-streams"></div>
+      </div>
 
 
 
-        <div>
+      <div class="remote-streams" id="js-remote-streams"></div>
 
-          <pre class="messages" id="js-messages"></pre>
 
-          <input type="text" id="js-local-text">
 
-          <button id="js-send-trigger">送信</button>
+      <div>
 
-        </div>
+        <pre class="messages" id="js-messages"></pre>
 
-        <!-- 追加 -->
-        <!-- <div>
+        <input type="text" id="js-local-text">
+
+        <button id="js-send-trigger">送信</button>
+
+      </div>
+
+      <!-- 追加 -->
+      <!-- <div>
 
           <pre class="messages2" id="js-messages2"></pre> -->
 
-          <!-- <input type="text" id="js-local-text2"> -->
-          <!-- <h2 id="timerLabel2"></h2>
+      <!-- <input type="text" id="js-local-text2"> -->
+      <!-- <h2 id="timerLabel2"></h2>
 
           <button id="js-send-trigger2">送信</button> -->
 
-        <!-- </div> -->
+      <!-- </div> -->
 
-      </div>
+    </div>
 
-      <!-- カメラマイクonoff追加 --> 
-      <div class="toggle-mute">
-        <!-- <button id="js-toggle-camera">Toggle Camera</button> -->
-        <!-- <a href="#" class="js-toggle-camera">カメラ切替</a> -->
-        <button id="js-toggle-camera">カメラ切替</button>
-        <span id="camera-status"></span>
-        <br>
-      
-        <!-- <button id="js-toggle-microphone">Toggle Microphone</button> -->
-        <button id="js-toggle-microphone">マイク切替</button>
-        <!-- <a href="#" class="js-toggle-microphone">マイク切替</a> -->
-        <span id="microphone-status"></span>
-        <!-- ↓があると変な黒い画面ができる -->
-        <!-- <video id="js-local-stream"></video> -->
-        <br>
-      </div>
+    <!-- カメラマイクonoff追加 -->
+    <div class="toggle-mute">
+      <!-- <button id="js-toggle-camera">Toggle Camera</button> -->
+      <!-- <a href="#" class="js-toggle-camera">カメラ切替</a> -->
+      <button id="js-toggle-camera">カメラ切替</button>
+      <span id="camera-status"></span>
+      <br>
 
-      <!-- プログラム表 -->
-      <table border="1">
-        <tr>
-          <td></td>
-          <td>第7会場(F1-1 ソフトウェア一般1)</td>
-        </tr>
-        <tr>
-          <td rowspan="5">午前</td>
-          <td style="background: #99FFFF;">F1-1-1 松井 優真 福井大 9:30-9:45</td>
-        </tr>
-        <tr>
-          <td>F1-1-2 沖野 浩太郎 石川高専 9:45-10:00</td>
-        </tr>
-        <tr>
-          <td>F1-1-3 前里 嶺太 金沢工大 10:00-10:15</td>
-        </tr>
-        <tr>
-          <td>F1-1-4 高 佳範 金沢工大 10:15-10:30</td>
-        </tr>
-        <tr>
-          <td>F1-1-5 堀居 大輔 金沢工大 10:30-10:45</td>
-        </tr>
-        
-      </table>
-      
+      <!-- <button id="js-toggle-microphone">Toggle Microphone</button> -->
+      <button id="js-toggle-microphone">マイク切替</button>
+      <!-- <a href="#" class="js-toggle-microphone">マイク切替</a> -->
+      <span id="microphone-status"></span>
+      <!-- ↓があると変な黒い画面ができる -->
+      <!-- <video id="js-local-stream"></video> -->
+      <br>
+    </div>
 
-      <!-- スライド -->
-      <ul class="bxslider">
-        <!-- <li><img src="samplesuraido1.png" width="450px"style="margin:auto;left:0;right:0;"></li> -->
-        <li><img src="samplesuraido1.png" width="400px"style="margin:auto;left:0;right:0;"></li>
-      </ul>
-      
-      <!-- ストップウォッチ機能移動 -->
-      <form><input type="button" id="stopwatchBTn" value="ストップウォッチ" onClick="win_open()"></form> 
-      <script type="text/javascript">
+    <!-- プログラム表 -->
+    <table border="1">
+      <tr>
+        <td></td>
+        <td>第7会場(F1-1 ソフトウェア一般1)</td>
+      </tr>
+      <tr>
+        <td rowspan="5">午前</td>
+        <td style="background: #99FFFF;">F1-1-1 松井 優真 福井大 9:30-9:45</td>
+      </tr>
+      <tr>
+        <td>F1-1-2 沖野 浩太郎 石川高専 9:45-10:00</td>
+      </tr>
+      <tr>
+        <td>F1-1-3 前里 嶺太 金沢工大 10:00-10:15</td>
+      </tr>
+      <tr>
+        <td>F1-1-4 高 佳範 金沢工大 10:15-10:30</td>
+      </tr>
+      <tr>
+        <td>F1-1-5 堀居 大輔 金沢工大 10:30-10:45</td>
+      </tr>
+
+    </table>
+
+
+    <!-- スライド -->
+    <ul class="bxslider">
+      <!-- <li><img src="samplesuraido1.png" width="450px"style="margin:auto;left:0;right:0;"></li> -->
+      <li><img src="samplesuraido1.png" width="500px" style="margin:auto;left:0;right:0;"></li>
+    </ul>
+
+    <!-- ストップウォッチ機能移動 -->
+    <form><input type="button" id="stopwatchBTn" value="ストップウォッチ" onClick="win_open()"></form>
+    <script type="text/javascript">
       function win_open() {
-        window.open("https://yumamatsui.github.io/stopwatch/index.html","","width=550,height=285"); 
+        window.open("https://yumamatsui.github.io/stopwatch/index.html", "", "width=550,height=285");
       }
-      </script> 
+    </script>
 
 
-      <!-- ストップウォッチ機能 -->
-      <!-- <div class="container2">
+    <!-- ストップウォッチ機能 -->
+    <!-- <div class="container2">
         <h1 id="timerLabel">00:00:00</h1>
         <input type="button" class="myButton" onclick="start()" value="START" id="startBtn"> -->
-        <!-- id="stopBtn"追加 -->
-        <!-- <input type="button" class="myButton" onclick="stop()" value="STOP" id="stopBtn"> 
+    <!-- id="stopBtn"追加 -->
+    <!-- <input type="button" class="myButton" onclick="stop()" value="STOP" id="stopBtn"> 
         <input type="button" class="myButton" onclick="reset()" value="RESET">
       </div> -->
 
-      <!-- <div class="container3">
+    <!-- <div class="container3">
         <form>
           <P>第1鈴指定時間入力</P>
           <label for="Bel1TextForm1">分: </label>
@@ -150,25 +150,25 @@
       
           <label for="Bel1TextForm2">秒: </label>
           <input type="text" id="Bel1TextForm2"> -->
-      
-          <!-- <label for="Bel1TextForm3">ミリ秒: </label>
+
+    <!-- <label for="Bel1TextForm3">ミリ秒: </label>
           <input type="text" id="Bel1TextForm3"> -->
-      
-          <!-- <button id="button">決定</button> -->
-        <!-- </form> -->
-      
-        <!-- <form>
+
+    <!-- <button id="button">決定</button> -->
+    <!-- </form> -->
+
+    <!-- <form>
             <P>第2鈴指定時間入力</P>
             <label for="Bel2TextForm1">分: </label>
             <input type="text" id="Bel2TextForm1">
         
             <label for="Bel2TextForm2">秒: </label>
             <input type="text" id="Bel2TextForm2"> -->
-        
-            <!-- <button id="button">決定</button> -->
-        <!-- </form> -->
-        
-        <!-- <form>
+
+    <!-- <button id="button">決定</button> -->
+    <!-- </form> -->
+
+    <!-- <form>
             <P>第3鈴指定時間入力</P>
             <label for="Bel3TextForm1">分: </label>
             <input type="text" id="Bel3TextForm1">
@@ -176,19 +176,19 @@
             <label for="Bel3TextForm2">秒: </label>
             <input type="text" id="Bel3TextForm2">
          -->
-            <!-- <button id="button">決定</button> -->
-        <!-- </form> -->
-        
-        <!-- <form> -->
-            <!-- 空白のため -->
-            <!-- <P></P> 
+    <!-- <button id="button">決定</button> -->
+    <!-- </form> -->
+
+    <!-- <form> -->
+    <!-- 空白のため -->
+    <!-- <P></P> 
             <button id="button">決定</button>
             <label for="resultForm">指定時間: </label>
             <input type="text" id="resultForm">
         </form>
       </div> -->
 
-    
+
     <!-- 音声ファイル -->
     <!-- <audio id="bgm1">
         <source src="bel1.mp3" type="audio/mp3">
@@ -202,23 +202,27 @@
         <source src="bel3.mp3" type="audio/mp3">
     </audio> -->
 
-      <!-- <a href="stopwatch/stopwatch.html" target="_blank"> ストップウォッチ機能 </a> -->
+    <!-- <a href="stopwatch/stopwatch.html" target="_blank"> ストップウォッチ機能 </a> -->
 
-      <p class="meta" id="js-meta"></p> 
+    <p class="meta" id="js-meta"></p>
 
-      <!-- 最初の位置↓ カメラマイクonoff追加 --> 
-      
-    </div>
+    <!-- 最初の位置↓ カメラマイクonoff追加 -->
 
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+  </div>
 
-    <!-- <script type="text/javascript" src="stopwatch.js"></script> -->
-    <script type="text/javascript" src="key.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    
 
-  </body>
+  <input type="button" id="button1" value="発表用" /><br />
+  <input type="button" id="button2" value="デフォルト" /><br />
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+
+  <!-- <script type="text/javascript" src="stopwatch.js"></script> -->
+  <script type="text/javascript" src="key.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="presention.js"></script>
+
+</body>
 
 </html>

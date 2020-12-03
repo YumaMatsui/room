@@ -26,6 +26,30 @@ video {
 
 }
 
+/* 自分のカメラ画面 */
+#js-local-stream { 
+  border-radius: 20%;  /*角を丸くする指定*/
+  width: 240px;
+  height: 180px;
+  
+}
+/* 他のユーザーのカメラ画面 */
+#js-remote-streams {
+  /* 横並びにする */
+  display: inline-flex;
+  /* 等間隔にする */
+  /* justify-content: space-evenly; */
+  /* 余白 */
+  /* padding : 10px; */
+  /* 枠線 */
+  /* border : solid 3px #333 ; */
+  width: 240px;
+  height: 180px;
+  position: relative;
+  /* left:  550px;  */
+  left:  40px; 
+  top: 0px;
+}
 
 
 /* .heading {
@@ -133,6 +157,7 @@ video {
 
   margin-top: 0;
 
+
 }
 
 
@@ -160,7 +185,7 @@ video {
 }
 
 
-
+/* チャット表示部 */
 .room .messages {
 
   /* background-color: #eee; */
@@ -172,29 +197,39 @@ video {
   padding: 8px;
 
   margin-top: 0;
+  /* チャット表示部の位置 */
+  position: relative;
+
 
 }
 
+/* チャット入力部 */
+.room #js-local-text {
+  position: relative;
+  
+}
+
+/* チャット送信ボタン */
+.room #js-send-trigger {
+  position: relative;
+  
+}
+
+
+/* プログラム表 */
 table {
   position:  absolute;        /*要素の配置方法を指定*/
   background-color: #fff;     /*背景色指定*/
-   /* padding:  20px;             余白指定 */
-   left:  1020px;                /*左からの位置指定 */
+  /* padding:  20px;             余白指定 */
+  left:  1020px;                /*左からの位置指定 */
   top: 460px;                  /*上からの位置指定*/ 
-
-  /* position: relative;
-  left:  850px; 
-  top: -100px; */
 }
 
+/* スライド表示 */
 .bxslider {
   position:  absolute;  
   left:  80px;                /*左からの位置指定 */
   top: 460px;                  /*上からの位置指定*/
-  
-  /* position: relative;
-  left:  -100px; 
-  top: 150px; */
 }
 
 .container2 {
