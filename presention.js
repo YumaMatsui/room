@@ -1,5 +1,10 @@
+// 発表用ボタンをクリックして発表用スタイルに変更する
 $(function () {
-    $("#button1").click(function () {
+    $("#button_happyou").click(function () {
+        // $("#button_happyou").css({
+        //     'position': 'fixed'
+        // });
+
         // 他ユーザーのカメラ映像の位置
         $("#js-remote-streams").css({
             'display': 'block' //横並び display: inline-flex 解除
@@ -19,7 +24,7 @@ $(function () {
             'position': 'relative'
         });
         $(".messages").css({
-            'right': '900px'
+            'left': '-900px'
         });
         $(".messages").css({
             'top': '250px'
@@ -30,7 +35,7 @@ $(function () {
             'position': 'relative'
         });
         $("#js-local-text").css({
-            'right': '900px'
+            'left': '-900px'
         });
         $("#js-local-text").css({
             'top': '250px'
@@ -41,7 +46,7 @@ $(function () {
             'position': 'relative'
         });
         $("#js-send-trigger").css({
-            'right': '900px'
+            'left': '-900px'
         });
         $("#js-send-trigger").css({
             'top': '250px'
@@ -52,10 +57,19 @@ $(function () {
             'position': 'relative'
         });
         $(".bxslider").css({
-            'left': '350px'
+            'width': 'auto'
+        });
+        $(".bxslider").css({
+            'height': 'auto'
         });
         $(".bxslider").css({
             'top': '-400px'
+        });
+        $(".bxslider").css({
+            'left': '330px'
+        });
+        $(".bxslider").css({
+            'opacity': '1'
         });
 
         // プログラム表
@@ -63,19 +77,22 @@ $(function () {
             'position': 'relative'
         });
         $("table").css({
+            'background-color': '#fff'
+        });
+        $("table").css({
+            'padding': '2px'
+        });
+        $("table").css({
             'left': '420px'
         });
         $("table").css({
-            'top': '100px'
+            'top': '150px'
+        });
+        $("table").css({
+            'opacity': '1'
         });
 
 
-    });
-
-    $("#button2").click(function () {
-        $("#js-local-stream").css({
-            'height': '180px'
-        });
     });
 
 });

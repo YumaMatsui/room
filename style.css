@@ -5,12 +5,13 @@
 
 body {
   margin: 0;
-  overflow: visible !important;
+  /* overflow: visible !important;
   background: -webkit-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
   background: -moz-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
   background: -ms-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
   background: -o-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
-  background: linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+  background: linear-gradient(45deg, #085078 10%, #85d8ce 90%); */
+  background-color: #FFF;
  }
 
 
@@ -26,19 +27,29 @@ video {
 
 }
 
+#js-session-number {
+  position: relative;
+  left:  700px; 
+  top: 300px;
+}
+
 /* 自分のカメラ画面 */
 #js-local-stream { 
   border-radius: 20%;  /*角を丸くする指定*/
-  width: 240px;
-  height: 180px;
+  /* width: 240px;
+  height: 180px; */
+  width: 520px;
+  height: 390px; 
   
 }
 /* 他のユーザーのカメラ画面 */
 #js-remote-streams {
+  justify-content: space-between;
   /* 横並びにする */
   display: inline-flex;
   /* 等間隔にする */
   /* justify-content: space-evenly; */
+  
   /* 余白 */
   /* padding : 10px; */
   /* 枠線 */
@@ -161,7 +172,6 @@ video {
 }
 
 
-
 /* room */
 
 .room {
@@ -184,10 +194,27 @@ video {
 
 }
 
+/* 相手の画面非表示にしておく */
+.hidden_remote-stream {
+  /* height: 0; */
+  /* padding: 0; */
+  /* overflow: hidden; */
+  opacity: 0;
+  /* transition: 0.8s; */
+}
+
+/* チャット表示切り替え 非表示にしておく*/
+.hidden_chat .hidden_show {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
 
 /* チャット表示部 */
 .room .messages {
-
+  
   /* background-color: #eee; */
   background-color: #FFFFCC;
 
@@ -199,38 +226,56 @@ video {
   margin-top: 0;
   /* チャット表示部の位置 */
   position: relative;
+  left:  120px; 
 
+  
 
 }
 
 /* チャット入力部 */
 .room #js-local-text {
   position: relative;
-  
+  left:  120px; 
 }
 
 /* チャット送信ボタン */
 .room #js-send-trigger {
   position: relative;
-  
+  left:  120px; 
 }
 
 
-/* プログラム表 */
+/* プログラム表非表示 */
 table {
-  position:  absolute;        /*要素の配置方法を指定*/
-  background-color: #fff;     /*背景色指定*/
-  /* padding:  20px;             余白指定 */
-  left:  1020px;                /*左からの位置指定 */
-  top: 460px;                  /*上からの位置指定*/ 
+  opacity: 0; 
+  width: 0;
+  height: 0;
 }
 
-/* スライド表示 */
-.bxslider {
-  position:  absolute;  
-  left:  80px;                /*左からの位置指定 */
-  top: 460px;                  /*上からの位置指定*/
-}
+
+/* スライド非表示 */
+.bxslider {    
+  opacity: 0;
+  width: 0;
+  height: 0;
+} 
+
+/*中身を非表示にしておく*/
+/* .bxslider .hidden {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+} */
+/*中身を表示させる*/
+/* .bxslider input:checked ~ .hidden {
+  height: auto;
+  opacity: 1;
+  position:  absolute;   
+  left:  80px;                
+  top: 460px;            
+} */
 
 .container2 {
   position: relative;
@@ -260,8 +305,48 @@ table {
 
 }
 
+/* ストップウォッチ機能移動ボタン */
 #stopwatchBTn {
   position: fixed;
   left:  0px; 
-  top: 80px;
+  top: 200px;
+}
+
+/* チャット機能移動ボタン */
+#chatBTn {
+  position: fixed;
+  left:  0px; 
+  top: 230px;
+}
+
+/* チャット機能表示ボタン */
+/* #button_chat {
+  position: fixed;
+  top: 230px;
+  right:  1427px; 
+} */
+
+/* 発表用スタイル変更ボタン */
+/* #button_happyou {
+  position: fixed;
+  top: 600px;
+} */
+
+/* デフォルトスタイル変更ボタン */
+/* #button_default {
+  position: fixed;
+  top: 630px;
+} */
+
+
+/* セッション1ボタン */
+#button_session1 {
+  position: fixed;
+  top: 500px;
+}
+
+/* セッション2ボタン */
+#button_session2 {
+  position: fixed;
+  top: 530px;
 }

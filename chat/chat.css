@@ -1,0 +1,22 @@
+/* チャット表示部 */
+.room .messages {
+  
+    /* background-color: #eee; */
+    background-color: #FFFFCC;
+    min-height: 100px;
+    margin: 8px;
+    width: 500px;
+    border: 3px solid #808080;
+  }
+  
+  /* チャット入力部 */
+  .room #js-local-text {
+    /* position: relative; */
+    /* left:  120px;  */
+  }
+  
+  /* チャット送信ボタン */
+  .room #js-send-trigger {
+    /* position: relative; */
+    /* left:  120px;  */
+  }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <title>SkyWay - Room example</title> -->
+    <title>チャット機能</title>
+
+    <link rel="stylesheet" href="chat.css">
+
+</head>
+
+
+<body>
+    <div class="container">
+
+        <!-- <h1 class="heading">学会開催運営システム</h1> -->
+
+        <p class="note">
+
+            Room モード:
+
+            <a href="#">mesh</a> / <a href="#sfu">sfu</a>
+
+        </p>
+
+        <div class="room">
+
+            <div>
+
+                <!-- <video id="js-local-stream"></video> -->
+
+                <span id="js-room-mode"></span>:
+
+                <input type="text" placeholder="セッション名" id="js-room-id">
+
+                <button id="js-join-trigger">入室</button>
+
+                <button id="js-leave-trigger">退室</button>
+
+            </div>
+
+            <!-- チャット機能表示 -->
+            <div>
+
+                <pre class="messages" id="js-messages"></pre>
+
+                <input type="text" id="js-local-text">
+
+                <button id="js-send-trigger">送信</button>
+
+            </div>
+        </div>
+
+        <!-- <p class="meta" id="js-meta"></p> -->
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+
+
+        <script type="text/javascript" src="key.js"></script>
+        <script type="text/javascript" src="chat.js"></script>
+</body>
+
+</html>
