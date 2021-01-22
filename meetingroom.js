@@ -55,10 +55,10 @@ $(function () {
             'position': 'relative;'
         });
         $(".hidden_remote-stream").css({
-            'left': '40px;'
+            'left': '100px;'
         });
         $(".hidden_remote-stream").css({
-            'top': '0px;'
+            'top': '100px;'
         });
 
         // チャット表示部
@@ -94,6 +94,10 @@ $(function () {
             'top': '250px'
         });
 
+        // ストップウォッチ機能表示 GUI
+        $(".container2").css({
+            'opacity': '1'
+        });
     });
 
 

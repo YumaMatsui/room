@@ -58,9 +58,23 @@ video {
   height: 180px;
   position: relative;
   /* left:  550px;  */
-  left:  40px; 
-  top: 0px;
+  left:  500px; 
+  top: -400px;
 }
+
+.joinleave {
+  justify-content: space-between;
+  /* 横並びにする */
+  /* display: inline-flex; */
+  width: 150px;
+  height: 130px;
+}
+
+/* #js-leave-trigger {
+  width: 80px;
+  height: 50px;
+
+} */
 
 
 /* .heading {
@@ -194,6 +208,13 @@ video {
 
 }
 
+#js-room-mode {
+  position: relative;
+  left:  400px; 
+  top : 0px;
+  opacity: 0;
+}
+
 /* 相手の画面非表示にしておく */
 .hidden_remote-stream {
   /* height: 0; */
@@ -201,6 +222,7 @@ video {
   /* overflow: hidden; */
   opacity: 0;
   /* transition: 0.8s; */
+
 }
 
 /* チャット表示切り替え 非表示にしておく*/
@@ -278,15 +300,17 @@ table {
 } */
 
 .container2 {
+  opacity: 0;
   position: relative;
-  left:  540px; 
-  top: -300px;
+  left:  600px; 
+  top: -500px;
 }
 
 .container3 {
+  opacity: 0;
   position: relative;
-  left:  450px; 
-  top: -300px;
+  left:  530px; 
+  top: -500px;
 }
 
 .toggle-mute {
@@ -350,3 +374,10 @@ table {
   position: fixed;
   top: 530px;
 }
+
+/* 時間指定入力ボタン */
+#timerGUI {
+  position: fixed;
+  top: 560px;
+}
+

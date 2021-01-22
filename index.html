@@ -19,178 +19,180 @@
 
   <div class="container">
 
-    <!-- <h1 class="heading">学会開催運営システム</h1> -->
+    <h1 id="js-session-number"></h1>
 
-    <h1 id="js-session-number">
-      </h2>
+    <p class="note">
+      <!-- Room.html -->
+    </p>
 
-      <p class="note">
+    <!-- ここ(room)を分けることはできなかった -->
+    <div class="room">
+      <video id="js-local-stream"></video>
 
-        Room モード:
-
-        <a href="#">mesh</a> / <a href="#sfu">sfu</a>
-
-      </p>
-
-      <div class="room">
-
-        <div>
-
-          <video id="js-local-stream"></video>
-
-          <span id="js-room-mode"></span>:
-
-          <input type="text" placeholder="セッション名" id="js-room-id">
-
-          <button id="js-join-trigger">入室</button>
-
-          <button id="js-leave-trigger">退室</button>
-
-        </div>
+      <!-- <span id="js-room-mode"></span>: -->
+      <span id="js-room-mode"></span>
+      <br />
 
 
-        <!-- 相手のカメラ -->
-        <!-- <div class="remote-streams" id="js-remote-streams"></div> -->
-        <!-- 相手のカメラ表示非表示設定 -->
-        <div class="hidden_remote-stream">
-          <label for="label_remote-stream"></label>
-          <div class="remote-streams" id="js-remote-streams"></div>
-        </div>
+      <!-- <input type="text" placeholder="セッション名" id="js-room-id"> -->
 
-        <!-- チャット機能 -->
-        <!-- <div>
+      <div class="joinleave">
+        <button id="js-join-trigger">入室</button>
 
-        <pre class="messages" id="js-messages"></pre>
-
-        <input type="text" id="js-local-text">
-
-        <button id="js-send-trigger">送信</button>
-
-      </div> -->
-
-        <!-- チャット機能非表示・表示切り替え -->
-        <!-- <div class="hidden_chat">
-          <label for="label_chat"></label>
-          <button id="button_chat">チャット機能</button>
-          <div class="hidden_show">
-            <pre class="messages" id="js-messages"></pre>
-
-            <input type="text" id="js-local-text">
-
-            <button id="js-send-trigger">送信</button>
-          </div>
-        </div> -->
-
-
-
-        <!-- 追加 -->
-        <!-- <div>
-
-          <pre class="messages2" id="js-messages2"></pre> -->
-
-        <!-- <input type="text" id="js-local-text2"> -->
-        <!-- <h2 id="timerLabel2"></h2>
-
-          <button id="js-send-trigger2">送信</button> -->
-
-        <!-- </div> -->
-
+        <button id="js-leave-trigger">退室</button>
       </div>
 
-      <!-- カメラマイクonoff追加 -->
-      <div class="toggle-mute">
-        <!-- <button id="js-toggle-camera">Toggle Camera</button> -->
-        <!-- <a href="#" class="js-toggle-camera">カメラ切替</a> -->
-        <button id="js-toggle-camera">カメラ切替</button>
-        <span id="camera-status"></span>
-        <br>
 
-        <!-- <button id="js-toggle-microphone">Toggle Microphone</button> -->
-        <button id="js-toggle-microphone">マイク切替</button>
-        <!-- <a href="#" class="js-toggle-microphone">マイク切替</a> -->
-        <span id="microphone-status"></span>
-        <!-- ↓があると変な黒い画面ができる -->
-        <!-- <video id="js-local-stream"></video> -->
-        <br>
-      </div>
-      <!-- プログラム表 -->
-      <table border="1">
-        <tr>
-          <td></td>
-          <td>第7会場(F1-1 ソフトウェア一般1)</td>
-        </tr>
-        <tr>
-          <td rowspan="5">午前</td>
-          <td style="background: #99FFFF;">F1-1-1 松井 優真 福井大 9:30-9:45</td>
-        </tr>
-        <tr>
-          <td>F1-1-2 沖野 浩太郎 石川高専 9:45-10:00</td>
-        </tr>
-        <tr>
-          <td>F1-1-3 前里 嶺太 金沢工大 10:00-10:15</td>
-        </tr>
-        <tr>
-          <td>F1-1-4 高 佳範 金沢工大 10:15-10:30</td>
-        </tr>
-        <tr>
-          <td>F1-1-5 堀居 大輔 金沢工大 10:30-10:45</td>
-        </tr>
+    </div>
 
-      </table>
+    <!-- 追加 -->
+    <div>
+
+      <pre class="messages2" id="js-messages2"></pre>
+
+      <!-- <input type="text" id="js-local-text2"> -->
+      <h1 id="timerLabel2"></h1>
+
+      <!-- <button id="js-send-trigger2">送信</button> -->
+
+    </div>
+
+    <!-- 相手のカメラ -->
+    <!-- <div class="remote-streams" id="js-remote-streams"></div> -->
+    <!-- 相手のカメラ表示非表示設定 -->
+    <div class="hidden_remote-stream">
+      <label for="label_remote-stream"></label>
+      <div class="remote-streams" id="js-remote-streams"></div>
+    </div>
+
+  </div>
+  <!-- ここ(room)を分けることはできなかった -->
 
 
-      <!-- スライド -->
-      <ul class="bxslider">
-        <!-- <li><img src="samplesuraido1.png" width="450px" style="margin:auto;left:0;right:0;"></li> -->
-        <li><img src="samplesuraido1.png" width="500px" style="margin:auto;left:0;right:0;"></li>
-      </ul>
 
-      <!-- スライドの非表示と表示を切り替える -->
-      <!-- <ul class="bxslider">
-      <label for="label1">クリックして表示</label>
-      <input type="checkbox" id="label1">
-      <div class="hidden">
-        <li><img src="samplesuraido1.png" width="500px" style="margin:auto;left:0;right:0;"></li>
-      </div>
-    </ul> -->
-
-      <!-- ストップウォッチ機能移動 -->
-      <form><input type="button" id="stopwatchBTn" value="ストップウォッチ" onClick="win_open()"></form>
-      <script type="text/javascript">
-        function win_open() {
-          window.open("https://yumamatsui.github.io/stopwatch/index.html", "", "width=550,height=285");
-        }
-      </script>
-
-      <!-- チャット機能移動 -->
-      <form><input type="button" id="chatBTn" value="チャット" onClick="win_open()"></form>
-      <script type="text/javascript">
-        function win_open() {
-          window.open("https://yumamatsui.github.io/chat/chat.html", "", "width=550,height=285");
-        }
-      </script>
+  <!-- カメラマイクonoff追加 -->
+  <div class="toggle-mute">
+    <!-- Room2 -->
+  </div>
 
 
-      <p class="meta" id="js-meta"></p>
 
-      <!-- 最初の位置↓ カメラマイクonoff追加 -->
+  <!-- プログラム表 -->
+  <table class="program" border="1">
+    <!-- Room3 -->
+  </table>
+
+
+  <!-- ストップウォッチ機能移動 -->
+
+  <!-- <form><input type="button" id="stopwatchBTn" value="ストップウォッチ" onClick="win_open()"></form>
+  <script type="text/javascript">
+    function win_open() {
+      window.open("https://yumamatsui.github.io/stopwatch/index.html", "", "width=550,height=285");
+    }
+  </script> -->
+
+  <!-- チャット機能移動 -->
+  <!-- <form><input type="button" id="chatBTn" value="チャット" onClick="win_open()"></form>
+  <script type="text/javascript">
+    function win_open() {
+      window.open("https://yumamatsui.github.io/chat/chat.html", "", "width=550,height=285");
+    }
+  </script> -->
+
+
+
+
+  <!-- ストップウォッチ機能 GUI -->
+  <div class="container2">
+    <h1 id="timerLabel">00:00:00</h1>
+    <input type="button" class="myButton" onclick="start()" value="START" id="startBtn">
+    <!-- id="stopBtn"追加 -->
+    <input type="button" class="myButton" onclick="stop()" value="STOP" id="stopBtn">
+    <input type="button" class="myButton" onclick="reset()" value="RESET">
+  </div>
+
+  <div class="container3">
+    <form>
+      <P>第1鈴指定時間入力</P>
+      <label for="Bel1TextForm1">分: </label>
+      <input type="text" id="Bel1TextForm1">
+
+      <label for="Bel1TextForm2">秒: </label>
+      <input type="text" id="Bel1TextForm2">
+
+    </form>
+
+    <form>
+      <P>第2鈴指定時間入力</P>
+      <label for="Bel2TextForm1">分: </label>
+      <input type="text" id="Bel2TextForm1">
+
+      <label for="Bel2TextForm2">秒: </label>
+      <input type="text" id="Bel2TextForm2">
+
+    </form>
+
+    <form>
+      <P>第3鈴指定時間入力</P>
+      <label for="Bel3TextForm1">分: </label>
+      <input type="text" id="Bel3TextForm1">
+
+      <label for="Bel3TextForm2">秒: </label>
+      <input type="text" id="Bel3TextForm2">
+
+    </form>
+
+    <form>
+      <!-- 空白のため -->
+      <P></P>
+      <button id="button">決定</button>
+      <label for="resultForm">指定時間: </label>
+      <input type="text" id="resultForm">
+    </form>
+  </div>
+
+  <!-- 音声ファイル -->
+  <audio id="bgm1">
+    <source src="bel1.mp3" type="audio/mp3">
+  </audio>
+  <!-- 音声ファイル -->
+  <audio id="bgm2">
+    <source src="bel2.mp3" type="audio/mp3">
+  </audio>
+  <!-- 音声ファイル -->
+  <audio id="bgm3">
+    <source src="bel3.mp3" type="audio/mp3">
+  </audio>
+
+
+  <p class="meta" id="js-meta"></p>
+
+  <!-- 最初の位置↓ カメラマイクonoff追加 -->
 
 
   </div>
 
   <!-- スタイル表示切り替えボタン -->
   <!-- <br />は縦に並べるため -->
-  <input type="button" id="button_happyou" value="発表用" /><br />
-  <input type="button" id="button_default" value="デフォルト" /><br />
+  <!-- <input type="button" id="button_happyou" value="発表用" /><br />
+  <input type="button" id="button_default" value="デフォルト" /><br /> -->
   <input type="button" id="button_session1" value="セッション1" /><br />
   <input type="button" id="button_session2" value="セッション2" /><br />
+  <input type="button" id="timerGUI" value="ベル音設定" /><br />
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
 
   <!-- <script type="text/javascript" src="stopwatch.js"></script> -->
   <script type="text/javascript" src="key.js"></script>
+
+  <script type="text/javascript" src="Room.js"></script>
+  <script type="text/javascript" src="Room2.js"></script>
+  <script type="text/javascript" src="Room3.js"></script>
+
   <script type="text/javascript" src="meetingroom.js"></script>
+  <script type="text/javascript" src="timerGUI.js"></script>
   <script type="text/javascript" src="script.js"></script>
   <!-- <script type="text/javascript" src="session.js"></script> -->
   <script type="text/javascript" src="presention.js"></script>
